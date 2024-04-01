@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/Insurance_prediction/__init__.py
+src/Insurance_prediction.egg-info/PKG-INFO
+src/Insurance_prediction.egg-info/SOURCES.txt
+src/Insurance_prediction.egg-info/dependency_links.txt
+src/Insurance_prediction.egg-info/top_level.txt
+src/Insurance_prediction/components/__init__.py
+src/Insurance_prediction/config/__init__.py
+src/Insurance_prediction/config/configuration.py
+src/Insurance_prediction/constants/__init__.py
+src/Insurance_prediction/entity/__init__.py
+src/Insurance_prediction/pipeline/__init__.py
+src/Insurance_prediction/utils/__init__.py
