@@ -1,0 +1,4 @@
+[ 2024-04-03 05:19:48,290 ] 160 numexpr.utils - INFO - NumExpr defaulting to 6 threads.
+[ 2024-04-03 05:19:57,318 ] 10 root - INFO - The execution has started
+[ 2024-04-03 05:19:57,318 ] 18 root - INFO - Reading SQL database started
+[ 2024-04-03 05:20:00,061 ] 17 root - INFO - custom exception

@@ -1,37 +1,48 @@
 import os
-import urllib.request as request
-import zipfile
-from Insurance_prediction import logger
-from Insurance_prediction.utils.common import get_size
-from Insurance_prediction.entity.config_entity import DataIngestionConfig
-from pathlib import Path
+import sys
+from src.Insurance_prediction.exception import CustomException
+from src.Insurance_prediction.logger import logging
+import pandas as pd
+from src.Insurance_prediction.utils import read_sql_data
 
+from sklearn.model_selection import train_test_split
+
+from dataclasses import dataclass
+
+
+@dataclass
+class DataIngestionConfig:
+    train_data_path:str=os.path.join('artifacts','train.csv')
+    test_data_path:str=os.path.join('artifacts','test.csv')
+    raw_data_path:str=os.path.join('artifacts','raw.csv')
 
 class DataIngestion:
-    def __init__(self, config: DataIngestionConfig):
-        self.config = config
+    def __init__(self):
+        self.ingestion_config=DataIngestionConfig()
+
+    def initiate_data_ingestion(self):
+        try:
+            ##reading the data from mysql
+            df=read_sql_data()
+            logging.info("Reading completed mysql database")
+
+            os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
+
+            df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
+
+            train_set,test_set=train_test_split(df,test_size=0.2,random_state=42)
+            train_set.to_csv(self.ingestion_config.train_data_path,index=False,header=True)
+            test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
+
+            logging.info("Data Ingestion is completed")
+
+            return(
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
 
 
-    
-    def download_file(self):
-        if not os.path.exists(self.config.local_data_file):
-            filename, headers = request.urlretrieve(
-                url = self.config.source_URL,
-                filename = self.config.local_data_file
             )
-            logger.info(f"{filename} download! with following info: \n{headers}")
-        else:
-            logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))}")  
 
 
-    
-    def extract_zip_file(self):
-        """
-        zip_file_path: str
-        Extracts the zip file into the data directory
-        Function returns None
-        """
-        unzip_path = self.config.unzip_dir
-        os.makedirs(unzip_path, exist_ok=True)
-        with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
-            zip_ref.extractall(unzip_path)
+        except Exception as e:
+            raise CustomException(e,sys)
