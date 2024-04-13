@@ -1,0 +1,10 @@
+[ 2024-04-09 01:20:35,958 ] 160 numexpr.utils - INFO - NumExpr defaulting to 6 threads.
+[ 2024-04-09 01:20:44,556 ] 11 root - INFO - The execution has started
+[ 2024-04-09 01:20:44,556 ] 22 root - INFO - Reading SQL database started
+[ 2024-04-09 01:20:45,536 ] 27 root - INFO - Reading completed mysql database
+[ 2024-04-09 01:20:45,603 ] 37 root - INFO - Data Ingestion is completed
+[ 2024-04-09 01:20:45,638 ] 67 root - INFO - Reading the train and test file
+[ 2024-04-09 01:20:45,638 ] 46 root - INFO - Categorical Columns:['sex', 'smoker', 'region']
+[ 2024-04-09 01:20:45,638 ] 47 root - INFO - Numerical Columns:['age', 'bmi', 'children']
+[ 2024-04-09 01:20:45,652 ] 84 root - INFO - Applying Preprocessing on training and test dataframe
+[ 2024-04-09 01:20:45,701 ] 22 root - INFO - custom exception
