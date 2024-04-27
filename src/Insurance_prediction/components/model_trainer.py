@@ -2,8 +2,7 @@ import os
 import sys
 from dataclasses import dataclass
 from urllib.parse import urlparse
-import mlflow
-import mlflow.sklearn
+
 import numpy as np
 from sklearn.metrics import mean_squared_error,mean_absolute_error
 from sklearn.ensemble import (
@@ -66,7 +65,8 @@ class ModelTrainer:
                     'n_estimators': [8,16,32,64,128,256]
                 },
                 "Linear Regression":{},
-                },
+            }
+            
             model_report:dict=evaluate_models(X_train,y_train,X_test,y_test,models,params)
 
             ## To get best model score from dict
@@ -74,23 +74,13 @@ class ModelTrainer:
 
              ## To get best model name from dict
 
-            best_model_name = list(model_report.keys())[
-                list(model_report.values()).index(best_model_score)
-            ]
+            best_model_name = max(model_report, key=model_report.get)  # Concise best model name finding            
             best_model = models[best_model_name]
 
             print("This is the best model:")
             print(best_model_name)
 
-            model_names = list(params.keys())
-
-            actual_model=""
-
-            for model in model_names:
-                if best_model_name == model:
-                    actual_model = actual_model + model
-
-            best_params = params[actual_model]
+            best_params = params[best_model_name]
 
             if best_model_score<0.6:
                 raise CustomException("No best model found")
@@ -105,8 +95,6 @@ class ModelTrainer:
 
             r2_square = r2_score(y_test, predicted)
             return r2_square
-
-
 
         except Exception as e:
             raise CustomException(e,sys)

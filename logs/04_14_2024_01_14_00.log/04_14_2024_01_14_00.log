@@ -1,0 +1,12 @@
+[ 2024-04-14 01:14:01,530 ] 160 numexpr.utils - INFO - NumExpr defaulting to 6 threads.
+[ 2024-04-14 01:14:07,995 ] 13 root - INFO - The execution has started
+[ 2024-04-14 01:14:07,995 ] 24 root - INFO - Reading SQL database started
+[ 2024-04-14 01:14:08,046 ] 32 root - INFO - Connection Established: <pymysql.connections.Connection object at 0x000001F451B23EE0>
+[ 2024-04-14 01:14:08,748 ] 27 root - INFO - Reading completed mysql database
+[ 2024-04-14 01:14:08,828 ] 37 root - INFO - Data Ingestion is completed
+[ 2024-04-14 01:14:08,864 ] 67 root - INFO - Reading the train and test file
+[ 2024-04-14 01:14:08,877 ] 46 root - INFO - Categorical Columns:['sex', 'smoker', 'region']
+[ 2024-04-14 01:14:08,877 ] 47 root - INFO - Numerical Columns:['age', 'bmi', 'children']
+[ 2024-04-14 01:14:08,881 ] 84 root - INFO - Applying Preprocessing on training and test dataframe
+[ 2024-04-14 01:14:08,950 ] 94 root - INFO - Saved preprocessing object
+[ 2024-04-14 01:14:08,955 ] 32 root - INFO - Split training and test input data

@@ -1,0 +1,5 @@
+[ 2024-04-17 15:43:06,910 ] 160 numexpr.utils - INFO - NumExpr defaulting to 6 threads.
+[ 2024-04-17 15:43:15,259 ] 13 root - INFO - The execution has started
+[ 2024-04-17 15:43:15,259 ] 24 root - INFO - Reading SQL database started
+[ 2024-04-17 15:43:15,303 ] 32 root - INFO - Connection Established: <pymysql.connections.Connection object at 0x0000025A17C54E80>
+[ 2024-04-17 15:43:15,918 ] 27 root - INFO - Reading completed mysql database

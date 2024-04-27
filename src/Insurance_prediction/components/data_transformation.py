@@ -69,7 +69,7 @@ class DataTransformation:
             preprocessing_obj=self.get_data_transformer_object()
 
             target_column_name="expenses"
-            numerical_columns = ["age","bmi","children"]
+            
 
             ## divide the train dataset to independent and dependent feature
 
@@ -86,10 +86,17 @@ class DataTransformation:
             input_feature_train_arr=preprocessing_obj.fit_transform(input_features_train_df)
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
 
-            train_arr = np.hstack([
-                input_feature_train_arr, np.array(target_feature_train_df)
-            ])
-            test_arr = np.hstack([input_feature_test_arr, np.array(target_feature_test_df)])
+            # Assuming target_feature_train_df and target_feature_test_df are pandas Series:
+            train_targets_arr = np.array(target_feature_train_df)
+            test_targets_arr = np.array(target_feature_test_df)
+
+
+            print("Shape of input_feature_train_arr:", input_feature_train_arr.shape)
+            print("Shape of train_targets:", train_targets_arr.shape)
+
+            train_arr = pd.merge(input_feature_train_arr, train_targets_arr, left_index=True, right_index=True)
+            test_arr = pd.merge(input_feature_test_arr, test_targets_arr, left_index=True, right_index=True)
+
 
             logging.info(f"Saved preprocessing object")
 
@@ -105,6 +112,7 @@ class DataTransformation:
                 test_arr,
                 self.data_transformation_config.preprocessor_obj_file_path
             )
+        
           
         except Exception as e:
              raise CustomException(sys,e)
