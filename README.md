@@ -86,3 +86,15 @@ _Add EDA plots here (correlation heatmaps, distribution of charges, age vs premi
 
 ---
 
+<img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/d6be1473-e351-4925-9ea2-95609dc18baa" />
+
+<img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/382d2186-e2fe-43e0-9223-2ee96f74383f" />
+
+<img width="668" height="570" alt="Image" src="https://github.com/user-attachments/assets/aad2c7f6-1970-4b77-90f4-ef61c5034fb3" />
+
+<img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/eec04531-7509-42d7-b588-de14c1fdf51f" />
+
+<img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/2252e31f-c3cc-4b7e-b2c1-517dc616852d" />
+
+<img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/174f5920-d8c9-49f1-b268-b11cef606a2b" />
+
