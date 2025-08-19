@@ -82,13 +82,17 @@ Insurance-Premium-Prediction/
 ---
 
 ## 📷 Sample Visualizations
-_Add EDA plots here (correlation heatmaps, distribution of charges, age vs premium, etc.)_  
 
 ---
+### 🔹 1. Correlation Heatmap
 
 <img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/d6be1473-e351-4925-9ea2-95609dc18baa" />
 
+### 🔹 2. Expenses Distribution
+
 <img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/382d2186-e2fe-43e0-9223-2ee96f74383f" />
+
+### 🔹 3. Children Count Distribution
 
 <img width="668" height="570" alt="Image" src="https://github.com/user-attachments/assets/aad2c7f6-1970-4b77-90f4-ef61c5034fb3" />
 
