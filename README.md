@@ -96,9 +96,15 @@ Insurance-Premium-Prediction/
 
 <img width="668" height="570" alt="Image" src="https://github.com/user-attachments/assets/aad2c7f6-1970-4b77-90f4-ef61c5034fb3" />
 
+### 🔹 4. Gender Distribution
+
 <img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/eec04531-7509-42d7-b588-de14c1fdf51f" />
 
+### 🔹 5. Smoker vs Non-Smoker
+
 <img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/2252e31f-c3cc-4b7e-b2c1-517dc616852d" />
+
+### 🔹 6. Region-wise Distribution
 
 <img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/174f5920-d8c9-49f1-b268-b11cef606a2b" />
 
